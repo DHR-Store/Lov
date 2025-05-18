@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Day Card</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <style>
+  * {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: Solitreo;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #fee2e9;
+  font-family: "Pangolin", cursive;
+  font-size: 1vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  position: relative;
+  top: 0vmin;
+}
+
+.envelope {
+  position: relative;
+  background: #f980a1;
+  height: 30vmin;
+  width: 47.9vmin;
+}
+
+.card {
+  position: absolute;
+  background: white;
+  height: 24vmin;
+  width: 43vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 2.5vmin;
+  top: 0vmin;
+  animation: slide-rev 0.2s ease-out;
+}
+.cardi {
+  position: absolute;
+  border-radius: 9px;
+  margin-left: 102px;
+  background: white;
+  height: 9vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: top;
+  left: 3.1vmin;
+  top: 5vmin;
+  animation: slide-rev 0.2s ease-out;
+}
+.myVideo {
+  height: absolute;
+}
+
+.message {
+  position: absolute;
+  top: 5vmin;
+  left: 6vmin;
+  color: #1D1B30;
+}
+.message1 {
+  color: #1D1B30;
+}
+
+.cover {
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-bottom: 15vmin solid #fba7bd;
+  border-left: 24vmin solid transparent;
+  border-right: 24vmin solid transparent;
+  top: 15vmin;
+  z-index: 3;
+}
+
+.cover::after {
+  /*left triangle*/
+  position: absolute;
+  content: "";
+  border-left: 24.5vmin solid #fcbbcc;
+  border-bottom: 15vmin solid transparent;
+  border-top: 15vmin solid transparent;
+  top: -15vmin;
+  left: -24vmin;
+}
+
+.cover::before {
+  position: absolute;
+  content: "";
+  border-right: 24.5vmin solid #fcbbcc;
+  border-bottom: 15vmin solid transparent;
+  border-top: 15vmin solid transparent;
+  top: -15vmin;
+  left: -0.5vmin;
+}
+.lid {
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-top: 15vmin solid #f980a1;
+  border-left: 24vmin solid transparent;
+  border-right: 24vmin solid transparent;
+  top: 0;
+  transform-origin: top;
+  animation: open-rev 2s;
+}
+.container:hover .lid {
+  animation: open 0.5s;
+  animation-fill-mode: forwards;
+}
+.container:hover .card {
+  animation: slide 0.2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+.shadow {
+  position: relative;
+  top: 3vmin;
+  border-radius: 50%;
+  opacity: 0.7;
+  height: 2vmin;
+  width: 48vmin;
+  background: #e8c5d0;
+}
+.heart {
+  position: relative;
+  width: 5vmin;
+  height: 4vmin;
+  top: 7vmin;
+  left: -1vmin;
+}
+
+.heart:before,
+.heart:after {
+  position: absolute;
+  content: "";
+  left: 2.5vmin;
+  top: 7vim;
+  width: 2.5vmin;
+  height: 4vmin;
+  background: #f40b4a;
+  border-radius: 2.5vmin 2.5vmin 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+@keyframes open {
+  100% {
+    transform: rotatex(180deg);
+  }
+}
+@keyframes slide {
+  100% {
+    transform: translatey(-15vmin);
+    z-index: 2;
+  }
+}
+@keyframes open-rev {
+  from {
+    transform: rotatex(-180deg);
+  }
+}
+@keyframes slide-rev {
+  from {
+    transform: translatey(-15vmin);
+  }
+}
+    
+  </style>
+  <div id="display"></div>
+  <div id="starButton">
+
+<script>
+
+    function showLetter() {
+        // Get the element with the hidden letter
+        const letter = document.getElementById("hidden-letter");
+        
+        // Make the letter visible
+        letter.style.display = "block";
+    }
+</script>
+    <audio id="myAudio" src="/catbug-i-love-you-made-with-Voicemod.mp3"></audio>
+    <div id="envelope">
+      <script>
+    document.getElementById('envelope').addEventListener('click', function() {
+      var audio = document.getElementById('myAudio');
+      audio.play();
+    });
+  </script>
+<link href='https://fonts.googleapis.com/css?family=Solitreo' rel='stylesheet'>
+  <div class="container">
+    <div class="envelope"></div>
+    <div class="card">
+        <h1 class="message"> Meri Mummy ki Bahu<br>Tum Kab Aaogi<br> meri jindagi me<br>I LOVE YOU KRITI<br>my MOMO💓:)</h1>
+         <div class="cardi">
+        
+       <img src="/fotor-ai-2024110422929.jpg" alt="" height="34" width="26" style="border-radius: 8px;" >
+       <h1 class="message1">I❤️U<br> Kriti</h1>
+       </div>
+      <div class="hear"></div>
+        <div class="myVideo">
+                  <video id="myVideo" width="170" height="84" controls src="/heart.mp4" type="video/mp4" style="border-radius: 15px;">
+                    </video>
+                     <script>
+        // JavaScript to play video on click
+        document.getElementById("starButton").onclick = function() {
+            const video = document.getElementById("myVideo");
+            video.play();
+        };
+    </script>
+                    </div>
+    </div>
+    <div class="cover"></div>
+    <div class="lid"></div>
+    <div class="shadow"></div>
+  </div>
+  </div>
+  </div>
+</body>
+</html>
